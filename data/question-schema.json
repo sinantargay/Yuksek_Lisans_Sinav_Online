@@ -1,0 +1,26 @@
+{
+  "description": "PHOTON soru veri şeması. Her soru doğrulanabilir, akademik ve sınav düzeyine uygun olmalıdır.",
+  "fields": {
+    "id": "Benzersiz soru kodu. Örn: PH-FOT-0001",
+    "question": "Soru metni",
+    "options": "5 şıklı cevap listesi",
+    "correctIndex": "Doğru cevabın 0-4 arası index değeri",
+    "category": "Ana konu etiketi",
+    "subCategory": "Alt konu etiketi",
+    "difficulty": "kolay | orta | zor | çok zor",
+    "probability": "1-5 arası çıkma olasılığı",
+    "explanation": "Kısa akademik gerekçe",
+    "source": "Kaynak notu veya açık kaynak referansı",
+    "verified": "true/false doğrulama durumu",
+    "status": "active | passive | review",
+    "createdAt": "YYYY-MM-DD",
+    "updatedAt": "YYYY-MM-DD"
+  },
+  "rules": [
+    "Doğrulanamayan bilgi soru yapılmaz.",
+    "Her soruda tek doğru cevap olmalıdır.",
+    "Şıklar birbirine biçimsel olarak yakın olmalıdır.",
+    "Soru yüksek lisans sınav düzeyine uygun olmalıdır.",
+    "Kaynak notu olmayan güncel bilgi aktif havuza alınmaz."
+  ]
+}
