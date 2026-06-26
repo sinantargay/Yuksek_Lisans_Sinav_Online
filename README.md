@@ -13,6 +13,29 @@ Bu sürümde sınav durum raporuna kullanıcının üyelik bilgileri eklendi:
 - Ödeme bildirim tarihi
 - Sınav rapor tarihi
 
+## Final Arşivi / Editör Modu
+
+PHOTON için `final-archive.js` modülü eklendi. Bu modül ana soru havuzunu silmeden, seçilmiş sorular için ayrı bir final arşivi oluşturur.
+
+### Özellikler
+
+- Soruyu finale ekleme / finalden çıkarma
+- Soruya önem derecesi verme: ★★★★★, ★★★★☆, ★★★☆☆
+- Soruya editör notu ekleme
+- Yönetici panelinde seçilmiş final sorularını listeleme
+- Sınav ayarlarında "Final Arşivi: sadece seçilmiş sorular" modu
+- Ana soru havuzuna zarar vermeden yerel `localStorage` üzerinde çalışma
+
+### Aktifleştirme
+
+`index.html` dosyasında `</body>` kapanışından hemen önce şu satır eklenmelidir:
+
+```html
+<script src="final-archive.js"></script>
+```
+
+Not: Bu modül mevcut tek dosyalık prototipi bozmadan eklenmek üzere tasarlanmıştır. Gerçek yayın aşamasında final arşivi Supabase/Firebase gibi sunucu taraflı bir veritabanına taşınmalıdır.
+
 ## Yerel demo kullanımı
 
 `index.html` dosyasını açarak çalıştırabilirsiniz. Yönetici demo şifresi: `sinan2026`
